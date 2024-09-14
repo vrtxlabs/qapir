@@ -1,2 +1,2 @@
 environment_variables:
-    staging_url: "http://127.0.0.1:7070"
+    url: "http://127.0.0.1:7070"

@@ -27,7 +27,7 @@ name: Test types
 test_steps:
   - description: GET /types
     type: http
-    url: ${env.staging_url}/types
+    url: ${env.url}/types
     method: GET
     expected_http_status: 200
     execute: |
@@ -290,7 +290,7 @@ test_parameters:
 test_steps:
   - description: Start a new job
     type: http
-    url: ${env.staging_url}/jobs
+    url: ${env.url}/jobs
     method: POST
     expected_http_status: 200
     payload: |
@@ -329,7 +329,7 @@ parallel: true
 test_steps:
   - description: Start a new job
     type: http
-    url: ${env.staging_url}/jobs
+    url: ${env.url}/jobs
     method: POST
     expected_http_status: 200
     payload: |
@@ -366,7 +366,7 @@ retries: 2
 test_steps:
   - description: Start a new job
     type: http
-    url: ${env.staging_url}/jobs
+    url: ${env.url}/jobs
     method: POST
     expected_http_status: 200
     payload: |
@@ -394,7 +394,7 @@ test_steps:
     retries: 2
     interval: 5s
     type: http
-    url: ${env.staging_url}/jobs
+    url: ${env.url}/jobs
     method: POST
     expected_http_status: 200
     payload: |

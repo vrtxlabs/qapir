@@ -8,7 +8,7 @@ Note that `qapir` does not save new or updated environment variables back to the
 ## Defining a new `qapir` environment
 ```
 environment_variables:
-    staging_url: "http://127.0.0.1:7070"
+    url: "http://127.0.0.1:7070"
     string_variable: "string_value"
     number_variable: 123
     bool_variable: true
@@ -16,7 +16,7 @@ environment_variables:
 
 ## Accessing `qapir` environment variables
 ```
-${env.staging_url}
+${env.url}
 ${env.string_variable}
 ${env.number_variable}
 ${env.bool_variable}

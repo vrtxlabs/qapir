@@ -3,7 +3,7 @@ name: Check that http-status ${param.status} is received and evaluated
 test_steps:
   - description: GET /status ${param.status}
     type: http
-    url: ${env.staging_url}/status
+    url: ${env.url}/status
     query_params:
       value: ${param.status}
     method: GET

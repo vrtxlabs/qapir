@@ -8,7 +8,7 @@ test_parameters:
 test_steps:
   - description: Start a new job
     type: http
-    url: ${env.staging_url}/jobs
+    url: ${env.url}/jobs
     method: POST
     expected_http_status: 200
     payload: |
@@ -27,7 +27,7 @@ test_steps:
 
   - description: Wait until job finishes
     type: http
-    url: ${env.staging_url}/jobs
+    url: ${env.url}/jobs
     method: GET
     query_params:
       name: ${param.name}
@@ -47,7 +47,7 @@ test_steps:
   - description: Delete completed job
     type: http
     method: DELETE
-    url: ${env.staging_url}/jobs
+    url: ${env.url}/jobs
     query_params:
       name: ${var.job_name}
     expected_http_status: 204

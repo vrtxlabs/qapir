@@ -3,7 +3,7 @@ name: Validate all types
 test_steps:
   - description: GET /types
     type: http
-    url: ${env.staging_url}/types
+    url: ${env.url}/types
     method: GET
     expected_http_status: 200
     execute: |

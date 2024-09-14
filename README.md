@@ -9,11 +9,12 @@ We value feedback from our users. If you find `qapir` useful, please consider gi
 
 # Examples
 
-1. [Writing tests](https://github.com/k-bert/kutlet/tree/main/.qapir)
+1. [Writing tests](https://github.com/vrtxlabs/qapir/tree/main/.qapir)
 
-2. Writing a [GitHub Action](https://github.com/k-bert/kutlet/blob/main/.github/workflows/qapir-demo.yml) that runs tests - see its execution [here](https://github.com/k-bert/kutlet/actions/runs/10801244193)
+2. Writing a [GitHub Action](https://github.com/vrtxlabs/qapir/blob/main/.github/workflows/qapir-demo.yml) that runs tests - see its execution [here](https://github.com/vrtxlabs/qapir/actions)
 
 3. Navigating the HTML report
+//TODO: insert link to report demo-recording
    
 
 # Demo
@@ -22,7 +23,7 @@ We value feedback from our users. If you find `qapir` useful, please consider gi
 
 
 # Installation
-1. Download an archive with the latest release from this GitHub page - choose the build with the matching architecture [here](https://github.com/k-bert/kutlet/releases/tag/latest)
+1. Download an archive with the latest release from this GitHub page - choose the build with the architecture matching your setup [here](https://github.com/vrtxlabs/qapir/releases/tag/latest)
    ```
    Linux amd64
    $ wget https://github.com/vrtxlabs/qapir/releases/download/latest/qapir-linux-amd64.tgz

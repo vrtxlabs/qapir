@@ -1,0 +1,11 @@
+test_files:
+  - type_tests/types_test.yml
+  - type_tests/numbers_test.yml
+  - type_tests/strings_test.yml
+  - type_tests/bools_test.yml
+  - type_tests/arrays_test.yml
+  - optional_fields_test.yml
+  - jsonpath_test.yml
+  - headers_test.yml
+  - http_status_test.yml
+  - multi_step_test.yml

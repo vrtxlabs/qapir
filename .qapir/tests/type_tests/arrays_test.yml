@@ -1,0 +1,35 @@
+name: Demonstrate all types of validation available for arrays
+
+test_steps:
+  - description: GET /types
+    type: http
+    url: ${env.staging_url}/types
+    method: GET
+    expected_http_status: 200
+    execute: |
+      SELECT
+        $.data.string_array AS ${var.string_array} AND
+        $.data.number_array AS ${var.number_array} AND
+        $.data.object_array AS ${var.object_array}
+      FROM
+        ${response.body}
+      EXPECT
+        ${var.string_array} -len 2 AND
+        ${var.number_array} -len <10 AND
+        ${var.object_array} -len >1 AND
+        ${var.number_array} -contains 23 AND
+        ${var.string_array} -ncontains unexpected;
+
+      SELECT_ALL
+        $.number_field AS ${var.iterable_number_field} AND
+        $.string_field AS ${var.iterable_string_field}
+      FROM
+        ${var.object_array}
+      EXPECT_ALL
+        ${var.iterable_string_field} -contains string_value
+      EXPECT
+         ${var.iterable_number_field#0} -eq 456 AND
+         ${var.iterable_string_field#0} -eq string_value_1 AND
+         ${var.iterable_number_field#1} -eq 789 AND
+         ${var.iterable_string_field#1} -eq string_value_2;
+

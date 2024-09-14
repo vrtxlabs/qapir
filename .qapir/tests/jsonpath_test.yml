@@ -1,0 +1,34 @@
+name: Demonstrate multiple types of supported jsonpath statements
+
+test_steps:
+  - description: GET /types
+    type: http
+    url: ${env.staging_url}/types
+    method: GET
+    expected_http_status: 200
+    execute: |
+      SELECT
+        $.data.object_array[?(@.number_field>456)] AS ${var.gt_456} AND
+        $.data.object_array[?(@.number_field==456)].string_field AS ${var.eq_456_string} AND
+        $.data.number_array[?(@!=15)] AS ${var.non_15}
+      FROM
+        ${response.body}
+      EXPECT
+        ${var.eq_456_string} -eq string_value_1;
+
+      SELECT
+        $.number_field AS ${var.filtered_number_field} AND
+        $.string_field AS ${var.filtered_string_field}
+      FROM
+        ${var.gt_456}
+      EXPECT
+        ${var.filtered_number_field} -eq 789 AND
+        ${var.filtered_string_field} -eq string_value_2;
+
+      SELECT_ALL
+        $ AS ${var.filtered_number}
+      FROM
+        ${var.non_15}
+      EXPECT_ALL
+        ${var.filtered_number} -neq 15 AND
+        ${var.filtered_number} -in [4, 8, 16, 23, 42];

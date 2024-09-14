@@ -1,0 +1,53 @@
+name: Demonstrate a multi-step test that runs with parameter '${param.name}'
+
+test_parameters:
+  name:
+    - jobname_1
+    - jobname_2
+
+test_steps:
+  - description: Start a new job
+    type: http
+    url: ${env.staging_url}/jobs
+    method: POST
+    expected_http_status: 200
+    payload: |
+      {
+        "name": ${param.name}
+      }
+    execute: |
+      SELECT
+        $.data.name AS ${var.job_name} AND
+        $.data.status AS ${var.job_status}
+      FROM
+        ${response.body}
+      EXPECT
+        ${var.job_name} -eq ${param.name} AND
+        ${var.job_status} -eq in_progress;
+
+  - description: Wait until job finishes
+    type: http
+    url: ${env.staging_url}/jobs
+    method: GET
+    query_params:
+      name: ${param.name}
+    expected_http_status: 200
+    retries: 2
+    interval: 5s
+    execute: |
+      FROM
+        ${response.body}
+      SELECT
+        $.data[0].name AS ${var.started_job_name} AND
+        $.data[0].status AS ${var.started_job_status}
+      EXPECT
+        ${var.started_job_name} -eq ${param.name} AND
+        ${var.started_job_status} -eq done;
+
+  - description: Delete completed job
+    type: http
+    method: DELETE
+    url: ${env.staging_url}/jobs
+    query_params:
+      name: ${var.job_name}
+    expected_http_status: 204

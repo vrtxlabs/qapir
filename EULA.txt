@@ -1,0 +1,116 @@
+QAPIR SOFTWARE LICENSE TERMS
+================================
+
+These license terms are an agreement between you and Vertex Labs
+Inc. registered in Canada (or one of its affiliates). They apply to the Software
+named "qapir" and any Software updates (except to
+the extent such updates are accompanied by new or additional
+terms, in which case those different terms apply prospectively and do
+not alter your rights or rights of Vertex Labs Inc. relating to pre-updated Software).
+
+IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS
+BELOW. BY DOWNLOADING OR USING THE SOFTWARE, YOU ACCEPT THESE TERMS.
+
+1. OWNERSHIP.
+
+The Software and any accompanying documentation are the exclusive property
+of Vertex Labs Inc. and its licensors. All rights, title, and interest
+in and to the Software, including but not limited to all intellectual property
+rights, are owned by Vertex Labs Inc. This includes, without limitation,
+any patents, copyrights, trademarks, and trade secrets related to the Software.
+
+2. COPYRIGHT NOTICE.
+
+The Software is protected by copyright laws and international copyright treaties,
+as well as other intellectual property laws and treaties. You acknowledge that
+the Software and any copies that you are authorized to make are owned
+by Vertex Labs Inc. and/or its licensors and that you do not acquire 
+any ownership rights by using or copying the Software.
+
+3. TRADEMARKS.
+
+“Qapir”, “qapir” and any other product or service names or slogans contained in
+the Software are trademarks or registered trademarks of Vertex Labs Inc.
+You may not use these trademarks without the express written
+permission of Vertex Labs Inc.
+
+4. NO TRANSFER OF OWNERSHIP.
+
+Nothing in this Agreement shall be construed as transferring any ownership rights
+or granting any licenses to any intellectual property of Vertex Labs Inc.
+other than the limited rights to use the Software as expressly provided herein.
+All rights not expressly granted in this Agreement are reserved by Vertex Labs Inc.
+
+5. INSTALLATION AND USE RIGHTS.
+
+You may install and use any number of copies of the Software to test your applications.
+
+6. SCOPE OF LICENSE.
+
+You will not (and have no right to):
+
+   a. work around any technical limitations in the Software that only
+      allow you to use it in certain ways;
+
+   b. reverse engineer, decompile, or disassemble the Software, or
+      attempt to do so;
+
+   c. use the Software in any way that is against the law or to create
+      or propagate malware; or
+
+   d. share, publish, distribute, or lend the Software, provide the
+      Software as a stand-alone hosted solution for others to use.
+
+7. EXPORT RESTRICTIONS.
+
+You must comply with all domestic and
+international export laws and regulations that apply to the Software,
+which include restrictions on destinations, end users, and end use.
+
+8. SUPPORT SERVICES.
+
+Vertex Labs Inc. is not obligated under this agreement to
+provide any support services for the Software.  Any support provided
+is “as is”, “with all faults”, and without warranty of any kind.
+
+9. UPDATES. 
+
+You may obtain updates only from sources authorized by Vertex Labs Inc.
+Updates may not include or support all existing Software features, services,
+or peripheral devices.
+
+10. ENTIRE AGREEMENT.  
+
+This agreement, and any other terms Vertex Labs Inc. may
+provide for supplements or updates is the entire agreement for the Software.
+
+11. DISCLAIMER OF WARRANTY.
+
+THE SOFTWARE IS PROVIDED “AS IS.”  YOU BEAR
+THE RISK OF USING IT.  VERTEX LABS INC. GIVES NO EXPRESS WARRANTIES,
+GUARANTEES, OR CONDITIONS.  TO THE EXTENT PERMITTED UNDER APPLICABLE
+LAWS, VERTEX LABS INC. EXCLUDES ALL IMPLIED WARRANTIES, INCLUDING
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NON-INFRINGEMENT.
+
+12. LIMITATION ON AND EXCLUSION OF DAMAGES.
+
+IF YOU HAVE ANY BASIS FOR
+RECOVERING DAMAGES DESPITE THE PRECEDING DISCLAIMER OF WARRANTY, YOU
+CAN RECOVER FROM VERTEX LABS INC. ONLY DIRECT DAMAGES UP
+TO U.S. $1.00.  YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING
+CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT, OR INCIDENTAL
+DAMAGES.
+
+This limitation applies to (a) anything related to the Software,
+content (including code) on third party Internet sites, or
+third party applications; and (b) claims for breach of contract,
+warranty, guarantee, or condition; strict liability, negligence, or
+other tort; or any other claim; in each case to the extent permitted
+by applicable law.
+
+It also applies even if Vertex Labs Inc. knew or should have known about
+the possibility of the damages.  The above limitation or exclusion
+may not apply to you because your state, province, or country may
+not allow the exclusion or limitation of incidental, consequential,
+or other damages.

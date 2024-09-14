@@ -1,0 +1,33 @@
+name: qapir-demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get qapir
+        run: |
+          wget https://github.com/k-bert/kutlet/releases/download/latest/qapir-linux-amd64.tgz
+          sudo tar -zxvf qapir-linux-amd64.tgz -C /opt/
+          sudo ln -s /opt/qapir /usr/bin/qapir
+          rm -rf qapir-linux-amd64.tgz
+
+      - name: Start demo-app and run tests
+        run: |
+          cd .qapir
+          qapir demo-app > /dev/null 2>&1 &
+          sleep 5
+          qapir run suite -f test_suite.yml -e staging.yml
+
+      - name: Upload results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: /home/runner/work/kutlet/kutlet/.qapir/reports/*.html

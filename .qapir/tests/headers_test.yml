@@ -1,0 +1,16 @@
+name: Find a response-header and check its type
+
+test_steps:
+  - description: GET /types
+    type: http
+    url: ${env.staging_url}/types
+    method: GET
+    expected_http_status: 200
+    execute: |
+      SELECT
+        Qapir-Header AS ${var.header}
+      FROM
+        ${response.headers}
+      EXPECT
+        ${var.header} -contains - AND
+        ${var.header} -type string;

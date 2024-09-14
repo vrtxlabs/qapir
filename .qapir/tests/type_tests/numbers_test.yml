@@ -1,0 +1,23 @@
+name: Demonstrate all types of validation available for numbers
+
+test_steps:
+  - description: GET /types
+    type: http
+    url: ${env.staging_url}/types
+    method: GET
+    expected_http_status: 200
+    execute: |
+      SELECT
+        $.data.number AS ${var.number} AND
+        $.data.number_array AS ${var.number_array} AND
+        $.data.number_array[0] AS ${var.number_array_elem}
+      FROM
+        ${response.body}
+      EXPECT
+        ${var.number} -exists AND
+        ${var.number} -eq 3.14 AND
+        ${var.number} -gt 3.13 AND
+        ${var.number} -lt 3.15 AND
+        ${var.number} -nin ${var.number_array} AND
+        ${var.number_array} -contains 23 AND
+        ${var.number_array_elem} -neq 789;

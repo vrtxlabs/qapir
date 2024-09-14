@@ -1,0 +1,26 @@
+name: Demonstrate all types of validation available for strings
+
+test_steps:
+  - description: GET /types
+    type: http
+    url: ${env.staging_url}/types
+    method: GET
+    expected_http_status: 200
+    execute: |
+      SELECT
+        $.data.string AS ${var.string} AND
+        $.data.string_array[0] AS ${var.string_array_elem_1} AND
+        $.data.string_array[1] AS ${var.string_array_elem_2}
+      FROM
+        ${response.body}
+      EXPECT
+        ${var.string} -exists AND
+        ${var.string} -len >8 AND
+        ${var.string} -contains dolor sit amet AND
+        ${var.string_array_elem_1} -eq consectetur adipiscing elit AND
+        ${var.string_array_elem_2} -neq ${var.string};
+
+      SET
+        ${var.test_strings} [consectetur adipiscing elit, ${var.string_array_elem_2}]
+      EXPECT
+        ${var.string} -nin ${var.test_strings};

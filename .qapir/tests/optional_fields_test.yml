@@ -1,0 +1,24 @@
+name: Showcase validation of fields that can be missing
+
+test_steps:
+  - description: GET /types
+    type: http
+    url: ${env.staging_url}/types
+    method: GET
+    expected_http_status: 200
+    execute: |
+      SELECT
+        $.data.object_array AS ${var.object_array}
+      FROM
+        ${response.body};
+
+      SELECT_ALL
+        $.number_field AS ${var.iterable_number_field} AND
+      FROM
+        ${var.object_array}
+      EXPECT_ALL
+        IF_EXISTS ${var.iterable_number_field} -in [456, 789]
+      EXPECT
+         ${var.iterable_number_field#0} -eq 456 AND
+         ${var.iterable_number_field#1} -eq 789 AND
+         IF_EXISTS ${var.iterable_number_field#2} -neq 123;

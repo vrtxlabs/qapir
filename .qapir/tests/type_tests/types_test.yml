@@ -1,0 +1,33 @@
+name: Validate all types
+
+test_steps:
+  - description: GET /types
+    type: http
+    url: ${env.staging_url}/types
+    method: GET
+    expected_http_status: 200
+    execute: |
+      SELECT
+        $.data.number AS ${var.number} AND
+        $.data.string AS ${var.string} AND
+        $.data.bool AS ${var.bool} AND
+        $.data.object AS ${var.object} AND
+        $.data.string_array AS ${var.string_array} AND
+        $.data.string_array[0] AS ${var.string_array_elem} AND
+        $.data.number_array AS ${var.number_array} AND
+        $.data.number_array[0] AS ${var.number_array_elem} AND
+        $.data.object_array AS ${var.object_array} AND
+        $.data.object_array[0] AS ${var.object_array_elem}
+      FROM
+        ${response.body}
+      EXPECT
+        ${var.number} -type number AND
+        ${var.string} -type string AND
+        ${var.bool} -type bool AND
+        ${var.object} -type object AND
+        ${var.string_array} -type array AND
+        ${var.string_array_elem} -type string AND
+        ${var.number_array} -type array AND
+        ${var.number_array_elem} -type number AND
+        ${var.object_array} -type array AND
+        ${var.object_array_elem} -type object;

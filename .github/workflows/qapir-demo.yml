@@ -13,7 +13,7 @@ jobs:
 
       - name: Get qapir
         run: |
-          wget https://github.com/k-bert/kutlet/releases/download/latest/qapir-linux-amd64.tgz
+          wget https://github.com/vrtxlabs/qapir/releases/download/latest/qapir-linux-amd64.tgz
           sudo tar -zxvf qapir-linux-amd64.tgz -C /opt/
           sudo ln -s /opt/qapir /usr/bin/qapir
           rm -rf qapir-linux-amd64.tgz
@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: test-report
-          path: /home/runner/work/kutlet/kutlet/.qapir/reports/*.html
+          path: /home/runner/work/qapir/qapir/.qapir/reports/*.html

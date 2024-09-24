@@ -264,6 +264,15 @@ EXPECT_ALL
   IF_EXISTS ${var.iterable_job_comment} -type string;
 ```
 
+### Test-data generation
+
+Tests that require test-data can benefit from `qapir`'s ability to generate the following kinds of data:
+
+1. Timestamp of type `number`, unix-milliseconds
+2. UUID v4 of type `string`
+
+To generate a timestamp or a uuid, use `${gen.timestamp}` or `${gen.uuid}` respectively.
+
 ### Test-parameters
 
 In order to parametrize tests, simply add the following lines to your test-scenario:
@@ -271,8 +280,8 @@ In order to parametrize tests, simply add the following lines to your test-scena
 ```
 test_parameters:
   name:
-    - value_1
-    - value_2
+    - some_job_name
+    - ${gen.timestamp}
 ```
 
 Then reference test-parameters in your scenario via `${param.name}`.
@@ -284,8 +293,8 @@ name: Test name
 
 test_parameters:
   name:
-    - value_1
-    - value_2
+    - some_job_name
+    - ${gen.timestamp}
 
 test_steps:
   - description: Start a new job

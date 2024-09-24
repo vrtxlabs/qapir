@@ -2,8 +2,8 @@ name: Demonstrate a multi-step test that runs with parameter '${param.name}'
 
 test_parameters:
   name:
-    - jobname_1
-    - jobname_2
+    - some_job_name
+    - ${gen.timestamp}
 
 test_steps:
   - description: Start a new job
@@ -13,7 +13,7 @@ test_steps:
     expected_http_status: 200
     payload: |
       {
-        "name": ${param.name}
+        "name": "${param.name}"
       }
     execute: |
       SELECT

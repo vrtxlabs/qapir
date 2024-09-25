@@ -266,7 +266,7 @@ EXPECT_ALL
 
 ### Test-data generation
 
-Tests that require test-data can benefit from `qapir`'s ability to generate the following kinds of data:
+Tests that require dynamically-generated test-data can benefit from `qapir`'s ability to generate the following kinds of data:
 
 1. Timestamp of type `number`, unix-milliseconds
 2. UUID v4 of type `string`
@@ -304,7 +304,7 @@ test_steps:
     expected_http_status: 200
     payload: |
       {
-        "name": ${param.name}
+        "name": "${param.name}"
       }
     execute: |
       SELECT
@@ -318,7 +318,7 @@ test_steps:
 ```
 
 Note that test-parameters is a map, where key is a string and value is an array. It is required that all keys point to
-arrays of the same length.
+arrays of the similar lengths.
 
 ### Test-parallelism
 
@@ -328,7 +328,7 @@ Sequential tests are executed in strict order, based on how they appear in the s
 
 Parallel tests all run in their own threads.
 
-Here's how you mark a test as paralell:
+Here's how you mark a test as parallel:
 
 ```
 name: Test name

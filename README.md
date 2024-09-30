@@ -39,48 +39,48 @@ your setup [here](https://github.com/vrtxlabs/qapir/releases/latest)
 
 **Linux amd64**
 
-   ```
-   wget https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-linux-amd64.tgz
-   ```
+```
+wget https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-linux-amd64.tgz
+```
 
 **Mac arm64**
 
-   ```
-   curl -LO https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-darwin-arm64.tgz
-   ```
+```
+curl -LO https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-darwin-arm64.tgz
+```
 
 Step 2: Unzip the archive
 
 **Linux amd64**
 
-   ```
-   sudo tar -zxvf qapir-linux-amd64.tgz -C /opt/
-   ```
+```
+sudo tar -zxvf qapir-linux-amd64.tgz -C /opt/
+```
 
 **Mac arm64**
 
 ```
-   sudo tar -zxvf qapir-darwin-arm64.tgz -C /opt/
+sudo tar -zxvf qapir-darwin-arm64.tgz -C /opt/
 ```
 
 Step 3: Create a symlink to make `qapir` globally-available
 
-   ```
-   sudo ln -s /opt/qapir /usr/local/bin/qapir
-   ```
+```
+sudo ln -s /opt/qapir /usr/local/bin/qapir
+```
 
 Step 4: (Optional) Delete the archive
 
 **Linux amd64**
 
 ```
-   rm -rf qapir-linux-amd64.tgz
+rm -rf qapir-linux-amd64.tgz
 ```
 
 **Mac arm64**
 
 ```
-   rm -rf qapir-darwin-arm64.tgz
+rm -rf qapir-darwin-arm64.tgz
 ``` 
 
 # Getting started with `qapir`

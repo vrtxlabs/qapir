@@ -23,6 +23,10 @@ our [Google Form](https://docs.google.com/forms/d/1JoBi2MCf6uaN3SZoxpX3oxIrDDeNE
 
 3. Navigating the HTML report
 
+https://github.com/user-attachments/assets/fbbc812f-146e-46ee-80ae-bb0d67ab900a
+
+
+
 # Demo
 
 [This guide](docs/Demo.md) explains how to execute a series of predefined tests on the provided demo-app. By following

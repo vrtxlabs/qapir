@@ -121,13 +121,13 @@ cd .qapir
 #### Run a test suite
 
 ```
-qapir run suite -f {path-to-suite-yml} -e {path-to-environment-yml}
+qapir run suite -f {suite.yml} -e {environment.yml}
 ```
 
 #### Run an individual test
 
 ```
-qapir run test -f {path-to-test-yml} -e {path-to-environment-yml}
+qapir run test -f {test.yml} -e {environment.yml}
 ```
 
 ### Step 5: Review Test Reports in Browser

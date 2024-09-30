@@ -6,7 +6,7 @@ response-payload contains expected data, and so on.
 
 Test-steps are executed sequentially. Every test-step can be retried with a desired interval and retry-limit. If all
 attempts of a test-step fail - the test is marked as failed and no further test-steps are executed. That said, same as
-test-steps, the test can also be retried.
+individual test-steps, the whole test-scenario can be retried.
 
 In order to perform actions on responses, `qapir` provides a `qtl` syntax (very much resembles `SQL`), which
 allows you to:
@@ -14,7 +14,7 @@ allows you to:
 1. Find data in response-payloads and test-variables via `jsonpath`, then extract it into variables.
 2. Perform various types of validation.
 
-The ablilty to extract data from response-payloads and save it in environment-variables and test-variables
+The ability to extract data from response-payloads and save it in environment-variables and test-variables
 allows `qapir` to pass data from one test-step to others. This in turn allows you to implement complex test-scenarios
 that
 involve multiple http-calls!
@@ -116,25 +116,25 @@ directive, validation on a null-entity fails.
 
 `-neq` - checks whether entity is not equal to another entity
 
-`-lt` - works for number only, checks whether entity is less than another entity
+`-lt` - works with numbers only, checks whether entity is less than another entity
 
-`-le` - works for number only, checks whether entity is less than or equal another entity
+`-le` - works with numbers only, checks whether entity is less than or equal another entity
 
-`-gt` - works for number only, checks whether entity greater than another entity
+`-gt` - works with numbers only, checks whether entity greater than another entity
 
-`-ge` - works for number only, checks whether entity greater than or equal another entity
+`-ge` - works with numbers only, checks whether entity greater than or equal another entity
 
-`-len` - works for strings and arrays, checks whether length of one entity is `<`, `<=`, `>`, `>=` or equal to length of
+`-len` - works with strings and arrays, checks whether length of one entity is `<`, `<=`, `>`, `>=` or equal to length of
 another entity
 
 `-in` - checks whether entity is part of an array
 
 `-nin` - checks whether entity is not part of an array
 
-`-contains` - works for strings and arrays, checks whether a string contains a given substring, or if an array contains
+`-contains` - works with strings and arrays, checks whether a string contains a given substring, or if an array contains
 a given element
 
-`-ncontains` - works for strings and arrays, checks whether a string does not contain a given substring, or if an array
+`-ncontains` - works with strings and arrays, checks whether a string does not contain a given substring, or if an array
 does not contain a given element
 
 `-exists` - checks whether entity exists
@@ -219,7 +219,7 @@ EXPECT
   ${var.iterable_job_status#1} -in [in_progress, done];
 ```
 
-#### Optional-fields
+#### Optional fields
 
 There are cases where a field is expected to be missing in one case, and present in another. Continuing with the
 previous example, let's imagine that our jobs-response looks like this:

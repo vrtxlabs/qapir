@@ -113,19 +113,24 @@ To learn more about test suites, please proceed [here](docs/Test.md/#suite).
 
 ### Step 4: Run Tests
 
+#### `cd` into `.qapir` directory of your project
+```
+$ cd .qapir
+```
+
 #### Run a test suite
 
 ```
-$ qapir run suite -f {suite.yml} -e {environment.yml}
+$ qapir run suite -f {path-to-suite-yml} -e {path-to-environment-yml}
 ```
 
 #### Run an individual test
 
 ```
-$ qapir run test -f {test.yml} -e {environment.yml}
+$ qapir run test -f {path-to-test-yml} -e {path-to-environment-yml}
 ```
 
-### Step 5: Review Test Reports
+### Step 5: Review Test Reports in Browser
 
 After every run, `qapir` will generate a one-file html report with all executed tests.
 Reports are saved in `.qapir/reports` directory as `${timestamp}.html` files.

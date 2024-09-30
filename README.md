@@ -40,13 +40,13 @@ your setup [here](https://github.com/vrtxlabs/qapir/releases/latest)
 **Linux amd64**
 
    ```
-   $ wget https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-linux-amd64.tgz
+   wget https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-linux-amd64.tgz
    ```
 
 **Mac arm64**
 
    ```
-   $ curl -LO https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-darwin-arm64.tgz
+   curl -LO https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-darwin-arm64.tgz
    ```
 
 Step 2: Unzip the archive
@@ -54,19 +54,19 @@ Step 2: Unzip the archive
 **Linux amd64**
 
    ```
-   $ sudo tar -zxvf qapir-linux-amd64.tgz -C /opt/
+   sudo tar -zxvf qapir-linux-amd64.tgz -C /opt/
    ```
 
 **Mac arm64**
 
 ```
-   $ sudo tar -zxvf qapir-mac-arm64.tgz -C /opt/
+   sudo tar -zxvf qapir-mac-arm64.tgz -C /opt/
 ```
 
 Step 3: Create a symlink to make `qapir` globally-available
 
    ```
-   $ sudo ln -s /opt/qapir /usr/local/bin/qapir
+   sudo ln -s /opt/qapir /usr/local/bin/qapir
    ```
 
 Step 4: (Optional) Delete the archive
@@ -74,13 +74,13 @@ Step 4: (Optional) Delete the archive
 **Linux amd64**
 
 ```
-   $ rm -rf qapir-linux-amd64.tgz
+   rm -rf qapir-linux-amd64.tgz
 ```
 
 **Mac arm64**
 
 ```
-   $ rm -rf qapir-mac-arm64.tgz
+   rm -rf qapir-mac-arm64.tgz
 ``` 
 
 # Getting started with `qapir`
@@ -88,8 +88,8 @@ Step 4: (Optional) Delete the archive
 ### Step 1: Initialize `.qapir` workspace in your project
 
 ```
-$ cd /path/to/your/project
-$ qapir init
+cd /path/to/your/project
+qapir init
 ```
 
 ### Step 2: Configure Environments
@@ -115,19 +115,19 @@ To learn more about test suites, please proceed [here](docs/Test.md/#suite).
 
 #### `cd` into `.qapir` directory of your project
 ```
-$ cd .qapir
+cd .qapir
 ```
 
 #### Run a test suite
 
 ```
-$ qapir run suite -f {path-to-suite-yml} -e {path-to-environment-yml}
+qapir run suite -f {path-to-suite-yml} -e {path-to-environment-yml}
 ```
 
 #### Run an individual test
 
 ```
-$ qapir run test -f {path-to-test-yml} -e {path-to-environment-yml}
+qapir run test -f {path-to-test-yml} -e {path-to-environment-yml}
 ```
 
 ### Step 5: Review Test Reports in Browser

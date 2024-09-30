@@ -5,19 +5,19 @@ Please, refer to [Installation](../README.md) before proceeding with the demo.
 
 ## Step 1: Start the demo-app
 ```
-$ qapir dempo-app
+qapir dempo-app
 ```
 
 ## Step 2: Clone this repository and `cd` to `.qapir`
 Execute all following commands in a separate terminal-session.
 ```
-$ cd .qapir
+cd .qapir
 ```
 
 ## Step 3: Run an example test-suite
 Execute all tests defined in `.qapir/suites/test_suite.yml` using `staging` environment variables from `.qapir/environments/staging.yml`.
 ```
-$ qapir run suite -f test_suite.yml -e staging.yml
+qapir run suite -f test_suite.yml -e staging.yml
 ```
 
 ## Step 4: Review test execution report

@@ -19,7 +19,7 @@ our [Google Form](https://docs.google.com/forms/d/1JoBi2MCf6uaN3SZoxpX3oxIrDDeNE
 1. [Writing tests](https://github.com/vrtxlabs/qapir/tree/main/.qapir)
 
 2. Writing a [GitHub Action](https://github.com/vrtxlabs/qapir/blob/main/.github/workflows/qapir-demo.yml) that runs
-   tests - see its execution [here](https://github.com/vrtxlabs/qapir/actions)
+   tests - see its execution [here](https://github.com/vrtxlabs/qapir/actions/runs/11105631023/job/30852225922#step:4:8)
 
 3. Navigating the HTML report
 

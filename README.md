@@ -35,18 +35,18 @@ these instructions, you'll quickly experience the look and feel of `qapir`.
 # Installation
 
 Step 1: Download an archive with the latest release from this GitHub page - choose the build with the architecture matching
-your setup [here](https://github.com/vrtxlabs/qapir/releases/tag/latest)
+your setup [here](https://github.com/vrtxlabs/qapir/releases/latest)
 
 **Linux amd64**
 
    ```
-   $ wget https://github.com/vrtxlabs/qapir/releases/download/latest/qapir-linux-amd64.tgz
+   $ wget https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-linux-amd64.tgz
    ```
 
 **Mac arm64**
 
    ```
-   $ curl -LO https://github.com/vrtxlabs/qapir/releases/download/latest/qapir-darwin-arm64.tgz
+   $ curl -LO https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-darwin-arm64.tgz
    ```
 
 Step 2: Unzip the archive

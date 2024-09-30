@@ -60,7 +60,7 @@ Step 2: Unzip the archive
 **Mac arm64**
 
 ```
-   sudo tar -zxvf qapir-mac-arm64.tgz -C /opt/
+   sudo tar -zxvf qapir-darwin-arm64.tgz -C /opt/
 ```
 
 Step 3: Create a symlink to make `qapir` globally-available
@@ -80,7 +80,7 @@ Step 4: (Optional) Delete the archive
 **Mac arm64**
 
 ```
-   rm -rf qapir-mac-arm64.tgz
+   rm -rf qapir-darwin-arm64.tgz
 ``` 
 
 # Getting started with `qapir`

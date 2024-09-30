@@ -13,7 +13,7 @@ jobs:
 
       - name: Get qapir
         run: |
-          wget https://github.com/vrtxlabs/qapir/releases/download/latest/qapir-linux-amd64.tgz
+          wget https://github.com/vrtxlabs/qapir/releases/latest/download/qapir-linux-amd64.tgz
           sudo tar -zxvf qapir-linux-amd64.tgz -C /opt/
           sudo ln -s /opt/qapir /usr/bin/qapir
           rm -rf qapir-linux-amd64.tgz

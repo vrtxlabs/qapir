@@ -23,7 +23,7 @@ test_steps:
         ${var.gt_456}
       EXPECT
         ${var.filtered_number_field} -eq 789 AND
-        ${var.filtered_string_field} -eq string_value_2;
+        ${var.filtered_string_field} -eq "string_value_2";
 
       SELECT_ALL
         $ AS ${var.filtered_number}

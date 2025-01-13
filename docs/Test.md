@@ -95,7 +95,7 @@ and `[1, 2, 3]` respectively:
 
 ```
 SET
-  ${var.string} your_string_value AND
+  ${var.string} "your_string_value" AND
   ${var.array} [1, 2, 3];
 ```
 
@@ -183,7 +183,7 @@ FROM
 EXPECT_ALL
   ${var.iterable_job_name} -type string AND
   ${var.iterable_job_status} -type string AND
-  ${var.iterable_job_status} -in [in_progress, done];
+  ${var.iterable_job_status} -in ["in_progress", "done"];
 ```
 
 First, we need to get the array with `SELECT` and save it as `${var.data}`. This step is needed
@@ -215,8 +215,8 @@ EXPECT
   ${var.iterable_job_name#1} -type string AND
   ${var.iterable_job_status#0} -type string AND
   ${var.iterable_job_status#1} -type string AND
-  ${var.iterable_job_status#0} -in [in_progress, done];
-  ${var.iterable_job_status#1} -in [in_progress, done];
+  ${var.iterable_job_status#0} -in ["in_progress", "done"];
+  ${var.iterable_job_status#1} -in ["in_progress", "done"];
 ```
 
 #### Optional fields
@@ -260,7 +260,7 @@ FROM
 EXPECT_ALL
   ${var.iterable_job_name} -type string AND
   ${var.iterable_job_status} -type string AND
-  ${var.iterable_job_status} -in [in_progress, done] AND
+  ${var.iterable_job_status} -in ["in_progress", "done"] AND
   IF_EXISTS ${var.iterable_job_comment} -type string;
 ```
 
@@ -314,7 +314,7 @@ test_steps:
         ${response.body}
       EXPECT
         ${var.job_name} -eq ${param.name} AND
-        ${var.job_status} -eq in_progress;
+        ${var.job_status} -eq "in_progress";
 ```
 
 Note that test-parameters is a map, where key is a string and value is an array. It is required that all keys point to
@@ -352,8 +352,8 @@ test_steps:
       FROM
         ${response.body}
       EXPECT
-        ${var.job_name} -eq test AND
-        ${var.job_status} -eq in_progress;
+        ${var.job_name} -eq "test" AND
+        ${var.job_status} -eq "in_progress";
 ```
 
 By default all tests are sequential.
@@ -389,8 +389,8 @@ test_steps:
       FROM
         ${response.body}
       EXPECT
-        ${var.job_name} -eq test AND
-        ${var.job_status} -eq in_progress;
+        ${var.job_name} -eq "test" AND
+        ${var.job_status} -eq "in_progress";
 ```
 
 Test-step retries - total count of attempts is 3 (1 main attempt + 2 retries) with an interval of 5 seconds.
@@ -417,8 +417,8 @@ test_steps:
       FROM
         ${response.body}
       EXPECT
-        ${var.job_name} -eq test AND
-        ${var.job_status} -eq in_progress;
+        ${var.job_name} -eq "test" AND
+        ${var.job_status} -eq "in_progress";
 ```
 
 ## Suite

@@ -18,7 +18,7 @@ test_steps:
         ${var.number_array} -len <10 AND
         ${var.object_array} -len >1 AND
         ${var.number_array} -contains 23 AND
-        ${var.string_array} -ncontains unexpected;
+        ${var.string_array} -ncontains "unexpected";
 
       SELECT_ALL
         $.number_field AS ${var.iterable_number_field} AND
@@ -26,10 +26,10 @@ test_steps:
       FROM
         ${var.object_array}
       EXPECT_ALL
-        ${var.iterable_string_field} -contains string_value
+        ${var.iterable_string_field} -contains "string_value"
       EXPECT
          ${var.iterable_number_field#0} -eq 456 AND
-         ${var.iterable_string_field#0} -eq string_value_1 AND
+         ${var.iterable_string_field#0} -eq "string_value_1" AND
          ${var.iterable_number_field#1} -eq 789 AND
-         ${var.iterable_string_field#1} -eq string_value_2;
+         ${var.iterable_string_field#1} -eq "string_value_2";
 

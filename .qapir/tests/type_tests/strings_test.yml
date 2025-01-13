@@ -16,11 +16,11 @@ test_steps:
       EXPECT
         ${var.string} -exists AND
         ${var.string} -len >8 AND
-        ${var.string} -contains dolor sit amet AND
-        ${var.string_array_elem_1} -eq consectetur adipiscing elit AND
+        ${var.string} -contains "dolor sit amet" AND
+        ${var.string_array_elem_1} -eq "consectetur adipiscing elit" AND
         ${var.string_array_elem_2} -neq ${var.string};
 
       SET
-        ${var.test_strings} [consectetur adipiscing elit, ${var.string_array_elem_2}]
+        ${var.test_strings} ["consectetur adipiscing elit", ${var.string_array_elem_2}]
       EXPECT
         ${var.string} -nin ${var.test_strings};

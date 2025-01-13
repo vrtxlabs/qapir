@@ -12,5 +12,5 @@ test_steps:
       FROM
         ${response.headers}
       EXPECT
-        ${var.header} -contains - AND
+        ${var.header} -contains "-" AND
         ${var.header} -type string;

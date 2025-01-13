@@ -23,7 +23,7 @@ test_steps:
         ${response.body}
       EXPECT
         ${var.job_name} -eq ${param.name} AND
-        ${var.job_status} -eq in_progress;
+        ${var.job_status} -eq "in_progress";
 
   - description: Wait until job finishes
     type: http
@@ -42,7 +42,7 @@ test_steps:
         $.data[0].status AS ${var.started_job_status}
       EXPECT
         ${var.started_job_name} -eq ${param.name} AND
-        ${var.started_job_status} -eq done;
+        ${var.started_job_status} -eq "done";
 
   - description: Delete completed job
     type: http

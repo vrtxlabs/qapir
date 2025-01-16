@@ -1,6 +1,6 @@
 # About
 
-`qapir` is a comprehensive **no-code** framework designed for API testing, providing a user-friendly syntax, integrated
+`Qapir` (pronounced "K-P-R") is a comprehensive **no-code** framework designed for API testing, providing a user-friendly syntax, integrated
 reporting, support for complex multi-step scenarios, customizable retries, and test parameterization, among other
 features.
 As a lightweight binary, `qapir` functions effectively as both a development tool and a test runner, easily integrating

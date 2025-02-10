@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 211
 ---
 
 # Create a Document
@@ -31,7 +31,7 @@ Add metadata to customize the sidebar label and position:
 ```md title="docs/hello.md" {1-4}
 ---
 sidebar_label: 'Hi!'
-sidebar_position: 3
+sidebar_position: 344
 ---
 
 # Hello

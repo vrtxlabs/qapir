@@ -1,0 +1,8 @@
+{
+  "label": "HTTP Mocks (WIP)",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Qapir provides an integrated and ready-to-use solution for tests that rely on HTTP-mocks. This feature is currently under construction, visit us often and check for the updates!"
+  }
+}

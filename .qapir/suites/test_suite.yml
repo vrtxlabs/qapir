@@ -9,3 +9,4 @@ test_files:
   - headers_test.yml
   - http_status_test.yml
   - multi_step_test.yml
+  - graphql_test.yml

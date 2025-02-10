@@ -1,0 +1,41 @@
+name: Graphql test with parameters '${param.code}' and '${param.name}'
+
+test_steps:
+
+  - description: Send a graphql request
+    type: graphql
+    url: https://countries.trevorblades.com/graphql
+    method: POST
+    expected_http_status: 200
+    
+    graphql_query: |
+      query Query($code: ID!) {
+        country(code: $code) {
+          name
+        }
+      }
+    
+    graphql_variables:
+      code: ${param.code}
+    
+    graphql_operation_name: "Query"
+    
+    graphql_extensions:
+      customKey: "customValue"
+    
+    execute: |
+      FROM
+        ${response.body}
+      SELECT
+        $.data.country.name AS ${var.country_name}
+      EXPECT
+        ${var.country_name} -type string AND
+        ${var.country_name} -eq "${param.name}";
+
+test_parameters:
+  code:
+    - AD
+    - DE
+  name:
+    - Andorra
+    - Germany

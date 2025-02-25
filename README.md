@@ -13,7 +13,7 @@ Akin to a Swiss Army Knife in the world of Backend Testing, it provides:
 * Integrated HTTP-mocking
 ...And many other useful features that simplify Backend Testing!
 
-As a lightweight binary, Qapir functions effectively as a local development tool and as a test runner that easily fits into Continuous Integration pipelines.
+As a lightweight binary, `Qapir` functions effectively as a local development tool and as a test runner that easily fits into Continuous Integration pipelines.
 
 It enables users to define test-scenarios in a clear and readable YAML-based syntax, execute individual tests or entire test suites, and generate detailed human-readable reports. All with just a single command!
 

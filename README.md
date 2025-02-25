@@ -39,7 +39,7 @@ these instructions, you'll quickly experience the look and feel of `qapir`.
 # Installation
 
 Step 1: Download an archive with the latest release from this GitHub page - choose the build with the architecture matching
-your setup [here](https://docs.qapir.io/installation)
+your setup [here](https://github.com/vrtxlabs/qapir/releases/latest)
 
 **Linux amd64**
 

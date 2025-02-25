@@ -1,6 +1,6 @@
 # About
 
-Qapir (pronounced K-P-R) is a comprehensive no-code tool for API and Backend Testing.
+`Qapir` (pronounced `K-P-R`) is a comprehensive no-code tool for API and Backend Testing.
 
 Akin to a Swiss Army Knife in the world of Backend Testing, it provides:
 
